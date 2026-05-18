@@ -1,0 +1,2717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Water for a Healthy Life</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a6fc9;
+            --secondary-color: #4db8ff;
+            --accent-color: #ff6b6b;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --water-blue: #1a6fc9;
+            --water-blue-light: #e6f2ff;
+            --water-blue-dark: #0d4b8a;
+            --water-teal: #00b4d8;
+            --water-teal-light: #e6f9ff;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+            background-color: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            padding: 180px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23f8f9fa"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23f8f9fa"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f8f9fa"></path></svg>');
+            background-size: cover;
+            z-index: 1;
+        }
+        
+        .nav-pills .nav-link.active {
+            background-color: var(--primary-color);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+            border-radius: 2px;
+        }
+        
+        .card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 25px;
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-img-top {
+            height: 220px;
+            object-fit: cover;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--water-blue-dark);
+            border-color: var(--water-blue-dark);
+            transform: translateY(-2px);
+        }
+        
+        .btn-outline-light:hover {
+            color: var(--primary-color);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .video-container iframe, .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 12px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--dark-color);
+        }
+        
+        .testimonial-card {
+            padding: 25px;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 60px 0 20px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23343a40"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23343a40"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23343a40"></path></svg>');
+            background-size: cover;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            margin-right: 15px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 15px;
+            transition: transform 0.3s;
+        }
+        
+        .social-icons a:hover {
+            transform: translateY(-3px);
+            color: var(--secondary-color);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--water-blue-dark);
+            transform: translateY(-3px);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+        }
+        
+        .quiz-question {
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .quiz-option {
+            margin-bottom: 12px;
+            padding: 12px 15px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 3px solid transparent;
+        }
+        
+        .quiz-option:hover {
+            background-color: #e9ecef;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .quiz-option.selected {
+            background-color: var(--secondary-color);
+            color: white;
+            border-left: 3px solid var(--primary-color);
+        }
+        
+        .quiz-result {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .tab-content {
+            padding: 25px 0;
+        }
+        
+        .method-step {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            flex-shrink: 0;
+            font-weight: bold;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .health-risk-card {
+            border-left: 5px solid var(--accent-color);
+            padding: 20px;
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+        
+        .health-risk-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Water Testing Section Styles */
+        .water-test-card {
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .water-test-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .water-test-card .card-header {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+        }
+        
+        .parameter-card {
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .safe-range {
+            background-color: #d4edda;
+            color: #155724;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .unsafe-range {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--water-teal));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Q50,80 0,100 Z" fill="rgba(255,255,255,0.1)"></path></svg>');
+            background-size: 100% 100%;
+            opacity: 0.2;
+        }
+
+        .cta-container {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .cta-btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            z-index: 1;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+
+        .cta-btn-primary:hover {
+            background: transparent;
+            color: white;
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .cta-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .cta-wave {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%23ffffff"></path><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%23ffffff"></path><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23ffffff"></path></svg>');
+            background-size: cover;
+            transform: rotate(180deg);
+        }
+
+        /* Modal Styles */
+        .modal-water {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .modal-water .modal-header {
+            background: var(--primary-color);
+            color: white;
+            border-bottom: none;
+            padding: 20px 25px;
+        }
+
+        .modal-water .modal-body {
+            padding: 30px;
+        }
+
+        .modal-water .close {
+            color: white;
+            text-shadow: none;
+            opacity: 0.8;
+        }
+
+        .modal-water .form-label {
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .modal-water .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #dee2e6;
+        }
+
+        .modal-water .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(26, 111, 201, 0.25);
+        }
+
+        .modal-water .btn-submit {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .modal-water .btn-submit:hover {
+            background: var(--water-blue-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Success Message */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .success-message i {
+            color: #28a745;
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .success-message h4 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Water Drop Animation */
+        .water-drop {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: drop 4s infinite ease-in;
+        }
+        
+        @keyframes drop {
+            0% {
+                transform: translateY(-100px) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(500px) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 120px 0;
+            }
+            
+            .section-title:after {
+                width: 60px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .method-step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+
+            .cta-title {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-btn {
+                width: 100%;
+            }
+        }
+        
+        /* Chatbox styles */
+        .chat-message {
+            max-width: 85%;
+            word-wrap: break-word;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .user-message {
+            margin-left: auto;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 18px 18px 4px 18px;
+        }
+        
+        .bot-message {
+            margin-right: auto;
+            background-color: #f0f3f5;
+            color: #333;
+            border-radius: 18px 18px 18px 4px;
+        }
+        
+        .typing-dots span {
+            display: inline-block;
+            animation: bounce 1s infinite;
+            opacity: 0.6;
+        }
+        
+        .typing-dots span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dots span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-2px); opacity: 1; }
+        }
+        
+        .suggested-question {
+            white-space: normal;
+            text-align: left;
+            font-size: 0.85rem;
+            padding: 6px 12px;
+        }
+        
+        #chat-container {
+            background-color: #f8fafb;
+            border: 1px solid #dee2e6;
+            border-radius: 12px;
+        }
+        
+        #user-input {
+            border-radius: 20px;
+            padding: 10px 15px;
+            border: 1px solid #dee2e6;
+        }
+        
+        #send-btn {
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 10px 20px;
+        }
+        
+        .bot-message strong {
+            color: var(--primary-color);
+        }
+        
+        .bot-message ul, .bot-message ol {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+        
+        .bot-message li {
+            margin-bottom: 5px;
+        }
+        
+        .bot-message br {
+            margin-bottom: 8px;
+            display: block;
+            content: "";
+        }
+        
+        /* Chemistry/Physics specific styles */
+        .chem-formula {
+            font-family: 'Courier New', monospace;
+            background-color: #f0f3f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: #d63384;
+        }
+        
+        .chem-element {
+            font-weight: bold;
+            color: #d63384;
+        }
+        
+        .temp-value {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-tint me-2"></i>CleanWater
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#why-safe-water">Why Safe Water?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#purification-methods">Purification Methods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#health-risks">Health Risks</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#storage-tips">Storage Tips</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#water-testing">Water Testing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#water-chat">Water Assistant</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Clean Water for a Healthy Life</h1>
+            <p class="lead mb-5">Empowering communities with water quality knowledge and solutions</p>
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+                <a href="#why-safe-water" class="btn btn-primary btn-lg px-4">Why Safe Water?</a>
+                <a href="#water-chat" class="btn btn-outline-light btn-lg px-4">Ask Our Assistant</a>
+            </div>
+        </div>
+        
+        <!-- Water drop animations -->
+        <div class="water-drop" style="left: 10%; animation-delay: 0s;"></div>
+        <div class="water-drop" style="left: 30%; animation-delay: 1s;"></div>
+        <div class="water-drop" style="left: 50%; animation-delay: 2s;"></div>
+        <div class="water-drop" style="left: 70%; animation-delay: 0.5s;"></div>
+        <div class="water-drop" style="left: 90%; animation-delay: 1.5s;"></div>
+    </section>
+
+    <!-- Why Safe Water Section -->
+    <section id="why-safe-water" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Why Safe Water Matters</h2>
+            
+            <div class="row mb-5">
+                <div class="col-md-6">
+                    <div class="video-container">
+                       <video src="video2.mp4" controls />
+                    </div>
+                    <h4>The Global Water Crisis</h4>
+                    <p>Learn about the challenges millions face in accessing clean drinking water and how it affects communities worldwide.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="video-container">
+                        <video src="video3.mp4" controls />
+                    </div>
+                    <h4>Impact on Children</h4>
+                    <p>Discover how unsafe water disproportionately affects children's health, education, and future opportunities.</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">2.2B</div>
+                        <div class="stat-label">People lack safe drinking water</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">4.2B</div>
+                        <div class="stat-label">People lack safe sanitation</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number">297K</div>
+                        <div class="stat-label">Children under 5 die annually from diarrhea</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Purification Methods Section -->
+    <section id="purification-methods" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Water Purification Methods</h2>
+            
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="pills-boiling-tab" data-bs-toggle="pill" data-bs-target="#pills-boiling" type="button" role="tab">Boiling</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-filtration-tab" data-bs-toggle="pill" data-bs-target="#pills-filtration" type="button" role="tab">Filtration</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-chlorination-tab" data-bs-toggle="pill" data-bs-target="#pills-chlorination" type="button" role="tab">Chlorination</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="pills-Alum-tab" data-bs-toggle="pill" data-bs-target="#pills-Alum" type="button" role="tab">Alum</button>
+                </li>
+            </ul>
+            
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-boiling" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="video-container">
+                                <video src="video4.mp4" controls />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Boiling Water</h3>
+                            <p>Boiling is the most traditional method of purifying water. When water is boiled, it kills most types of disease-causing organisms.</p>
+                            
+                            <div class="method-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h5>Collect Water</h5>
+                                    <p>Collect water from the cleanest possible source and filter it through a clean cloth to remove large particles.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h5>Bring to Boil</h5>
+                                    <p>Bring water to a rolling boil for at least 1 minute (3 minutes at altitudes above 6,500 feet).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h5>Cool Safely</h5>
+                                    <p>Allow water to cool naturally and store in clean, covered containers.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <strong>Science Note:</strong> Boiling water at <span class="temp-value">100°C</span> kills pathogens by denaturing their proteins and disrupting their cell membranes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="pills-filtration" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="video-container">
+                                <video src="video5.mp4" controls />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Water Filtration</h3>
+                            <p>Filtration systems remove impurities by physically blocking them while allowing clean water to pass through.</p>
+                            
+                            <div class="method-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h5>Choose Filter Type</h5>
+                                    <p>Select appropriate filter (ceramic, carbon, reverse osmosis, etc.) based on contaminants present.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h5>Install Properly</h5>
+                                    <p>Follow manufacturer instructions for installation and maintenance.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h5>Maintain Regularly</h5>
+                                    <p>Clean and replace filter elements as recommended to ensure effectiveness.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <strong>Science Note:</strong> Filters work through physical sieving (size exclusion), adsorption (activated carbon), or ion exchange (softeners).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="pills-chlorination" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="video-container">
+                                <video src="video6.mp4" controls />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Chlorination</h3>
+                            <p>Chlorine is effective against nearly all waterborne pathogens and is widely used in municipal water systems.</p>
+                            
+                            <div class="method-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h5>Measure Water</h5>
+                                    <p>Determine the volume of water to be treated.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h5>Add Chlorine</h5>
+                                    <p>Add the appropriate amount of chlorine (typically 2-4 drops of household bleach per liter).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h5>Wait</h5>
+                                    <p>Stir and wait at least 30 minutes before drinking.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <strong>Science Note:</strong> Chlorine (<span class="chem-formula">Cl<sub>2</sub></span>) kills microbes by oxidizing cellular components. Residual chlorine continues to protect against recontamination.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tab-pane fade" id="pills-Alum" role="tabpanel">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="video-container">
+                                <video src="video7.mp4" controls />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Alum (Aluminium Sulphate)</h3>
+                            <p>This is a chemical substance commonly used to purify water by removing suspended particles and impurities.</p>
+                            
+                            <div class="method-step">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <h5>Add Alum to Water</h5>
+                                    <p>Add a small amount of alum to turbid water. Stir the mixture gently for a few minutes to dissolve the alum evenly.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <h5>Allow Sedimentation</h5>
+                                    <p>Let the water sit undisturbed for 1-2 hours. The alum causes suspended particles to clump together and settle at the bottom.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="method-step">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <h5>Filter or Decant</h5>
+                                    <p>Carefully pour the clear water from the top into another clean container, leaving the sediment behind.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info mt-4">
+                                <strong>Science Note:</strong> Alum (<span class="chem-formula">Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></span>) works through coagulation - the positive aluminum ions neutralize negative charges on particles, allowing them to clump together.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Risks Section -->
+    <section id="health-risks" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Health Risks of Unsafe Water</h2>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="health-risk-card">
+                        <h4>Diarrheal Diseases</h4>
+                        <p>Contaminated water can transmit diseases such as cholera, dysentery, typhoid, and polio. Diarrhea is the most widely known disease linked to contaminated food and water.</p>
+                    </div>
+                    
+                    <div class="health-risk-card">
+                        <h4>Malnutrition</h4>
+                        <p>Repeated diarrhea and intestinal infections from unsafe water can lead to malnutrition, particularly in children, by reducing nutrient absorption.</p>
+                    </div>
+                    
+                    <div class="health-risk-card">
+                        <h4>Chemical Poisoning</h4>
+                        <p>Water contaminated with heavy metals (like arsenic or lead) or industrial chemicals can cause long-term health issues including cancer and neurological damage.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="health-risk-card">
+                        <h4>Parasitic Infections</h4>
+                        <p>Diseases like schistosomiasis and guinea worm disease are spread through contact with contaminated water, causing chronic illness and disability.</p>
+                    </div>
+                    
+                    <div class="health-risk-card">
+                        <h4>Vector-Borne Diseases</h4>
+                        <p>Stagnant water provides breeding grounds for mosquitoes that transmit malaria, dengue fever, and other diseases.</p>
+                    </div>
+                    
+                    <div class="health-risk-card">
+                        <h4>Developmental Issues</h4>
+                        <p>Children exposed to contaminated water may suffer from stunted growth and cognitive impairments that affect their entire lives.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="img7.jpg" class="img-fluid h-100" style="object-fit: cover;" alt="Health consequences">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Long-term Health Consequences</h5>
+                                    <p class="card-text">Drinking unsafe or contaminated water over a long period can affect your health in various ways:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul class="fa-ul">
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Chronic illness</li>
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Stomach and digestive disorders</li>
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Weakened immune system</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="fa-ul">
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Weakened bones</li>
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Neurological problems</li>
+                                                <li><span class="fa-li"><i class="fas fa-check-circle text-primary"></i></span>Developmental issues in children</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Quality Testing Section -->
+    <section id="water-testing" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Test Your Water Quality</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div class="row">
+                                <!-- pH Input -->
+                                <div class="col-md-6 mb-4">
+                                    <label for="ph-value" class="form-label">Enter pH Value (0-14)</label>
+                                    <input type="number" id="ph-value" class="form-control" min="0" max="14" step="0.1" placeholder="e.g., 7.4">
+                                    <div id="ph-feedback" class="mt-2"></div>
+                                </div>
+                                
+                                <!-- TDS Input -->
+                                <div class="col-md-6 mb-4">
+                                    <label for="tds-value" class="form-label">Enter TDS Value (mg/L)</label>
+                                    <input type="number" id="tds-value" class="form-control" min="0" step="1" placeholder="e.g., 250">
+                                    <div id="tds-feedback" class="mt-2"></div>
+                                </div>
+                            </div>
+                            
+                            <button id="analyze-btn" class="btn btn-primary w-100">Analyze My Water</button>
+                            
+                            <!-- Results -->
+                            <div id="results-container" class="mt-4 p-3 rounded" style="display: none;">
+                                <h4 class="text-center mb-3">Your Water Analysis</h4>
+                                <div id="ph-result" class="mb-3 p-3 rounded"></div>
+                                <div id="tds-result" class="mb-3 p-3 rounded"></div>
+                                <div id="recommendations" class="p-3 rounded bg-white"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Educational Info -->
+                    <div class="mt-5">
+                        <h4 class="text-center mb-4">Understanding Water Quality Parameters</h4>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4 h-100">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-water me-2"></i> pH Levels</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>0-6.5:</strong> Acidic (Corrosive, may leach metals)</li>
+                                            <li class="list-group-item"><strong>6.5-8.5:</strong> Ideal range for drinking</li>
+                                            <li class="list-group-item"><strong>8.5-14:</strong> Alkaline (May cause scaling)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4 h-100">
+                                    <div class="card-body">
+                                        <h5><i class="fas fa-flask me-2"></i> TDS Levels</h5>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><strong>0-300:</strong> Excellent</li>
+                                            <li class="list-group-item"><strong>300-600:</strong> Good</li>
+                                            <li class="list-group-item"><strong>600-900:</strong> Fair (Consider treatment)</li>
+                                            <li class="list-group-item"><strong>900+:</strong> Poor (Needs treatment)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card mt-4">
+                            <div class="card-body">
+                                <h5><i class="fas fa-temperature-high me-2"></i> Temperature Guidelines</h5>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><strong>Ideal drinking temperature:</strong> <span class="temp-value">10-15°C</span> (Refreshing without being too cold)</li>
+                                    <li class="list-group-item"><strong>Boiling point at sea level:</strong> <span class="temp-value">100°C</span> (Kills most pathogens)</li>
+                                    <li class="list-group-item"><strong>Danger zone for bacterial growth:</strong> <span class="temp-value">5-60°C</span> (Store water outside this range)</li>
+                                    <li class="list-group-item"><strong>Freezing point:</strong> <span class="temp-value">0°C</span> (Can be used for purification through freezing)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safe Storage Tips Section -->
+    <section id="storage-tips" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Safe Water Storage Tips</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-5 mb-4 mx-2">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="img1.jpg" class="card-img-top" alt="Proper containers">
+                        <div class="card-body">
+                            <h5 class="card-title">Choose Proper Containers</h5>
+                            <p class="card-text">Use food-grade containers with narrow mouths and tight-fitting lids to prevent contamination.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 mb-4 mx-2">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="img2.jpg" class="card-img-top" alt="Safe handling">
+                        <div class="card-body">
+                            <h5 class="card-title">Practice Safe Handling</h5>
+                            <p class="card-text">Always use a clean ladle or tap to remove water. Never dip hands or dirty objects into stored water.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 mb-4 mx-2">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="img3.jpg" class="card-img-top" alt="Clean containers">
+                        <div class="card-body">
+                            <h5 class="card-title">Clean Storage Containers Regularly</h5>
+                            <p class="card-text">Wash storage containers with soap and clean water at least once a week. For added safety, rinse with a chlorine solution.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-5 mb-4 mx-2">
+                    <div class="card h-100 text-center shadow-sm">
+                        <img src="img4.jpg" class="card-img-top" alt="Safe location">
+                        <div class="card-body">
+                            <h5 class="card-title">Store in a Safe Location</h5>
+                            <p class="card-text">Keep water containers in a cool, dark place away from chemicals and animals. Elevate containers to prevent contact with dirt or floodwater.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8 text-center">
+                    <div class="video-container">
+                        <video src="vedio1.mp4" controls></video>
+                    </div>
+                    <h4 class="mt-3">Proper Water Storage Demonstration</h4>
+                    <p class="px-3">Watch this video to see proper water storage techniques in action and learn how to maintain water quality in your home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-5">
+        <div class="container">
+            <h2 class="text-center section-title">Test Your Water Knowledge</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="quiz-container">
+                        <div id="quiz-questions">
+                            <!-- Questions will be inserted here by JavaScript -->
+                        </div>
+                        
+                        <button id="submit-quiz" class="btn btn-primary btn-lg w-100 mt-3">Submit Answers</button>
+                        
+                        <div class="quiz-result" id="quiz-result">
+                            <h4>Your Score: <span id="quiz-score">0</span>/5</h4>
+                            <p id="quiz-feedback"></p>
+                            <div id="question-explanations" class="mt-4"></div>
+                            <button id="retake-quiz" class="btn btn-outline-primary mt-3">Retake Quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI chatbox section -->
+    <section id="water-chat" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Water Quality Assistant</h2>
+            <p class="text-center mb-4">Ask any question about water quality, purification, or health risks</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <!-- Chat Container -->
+                            <div id="chat-container" style="height: 400px; overflow-y: auto; margin-bottom: 20px; padding: 15px; background-color: #f8f9fa; border-radius: 8px;">
+                                <div id="chat-messages">
+                                    <div class="chat-message bot-message mb-3 p-3 rounded">
+                                        <strong>Water Assistant:</strong> Hello! I can answer all your water-related questions.<br>
+                                        Try asking about:
+                                        <ul>
+                                            <li>Water chemistry (pH, TDS, composition)</li>
+                                            <li>Purification methods</li>
+                                            <li>Health risks</li>
+                                            <li>Storage recommendations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Input Area -->
+                            <div class="input-group">
+                                <input type="text" id="user-input" class="form-control" placeholder="Ask a question about water..." aria-label="Ask a question">
+                                <button class="btn btn-primary" type="button" id="send-btn">
+                                    <i class="fas fa-paper-plane"></i> Send
+                                </button>
+                            </div>
+                            
+                            <!-- Suggested Questions -->
+                            <div class="mt-3">
+                                <p class="small text-muted mb-2">Try asking:</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <button class="btn btn-outline-secondary btn-sm suggested-question">What's the chemical formula of water?</button>
+                                    <button class="btn btn-outline-secondary btn-sm suggested-question">At what temperature does water boil?</button>
+                                    <button class="btn btn-outline-secondary btn-sm suggested-question">How much oxygen is in water?</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Call to Action Section -->
+    <section class="cta-section py-5">
+        <div class="cta-container">
+            <div class="cta-card">
+                <h2 class="cta-title">Join Our Clean Water Initiative</h2>
+                <p class="cta-subtitle">Help us bring clean water to communities in need through education and practical solutions.</p>
+                
+                <div class="cta-buttons">
+                    <button class="cta-btn cta-btn-primary" data-bs-toggle="modal" data-bs-target="#complaintModal">
+                        <i class="fas fa-exclamation-circle"></i> Raise Complaint
+                    </button>
+                    <button class="cta-btn cta-btn-secondary" data-bs-toggle="modal" data-bs-target="#volunteerModal">
+                        <i class="fas fa-hands-helping"></i> Volunteer
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cta-wave"></div>
+    </section>
+
+    <!-- Complaint Modal -->
+    <div class="modal fade" id="complaintModal" tabindex="-1" aria-labelledby="complaintModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-water">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="complaintModalLabel"><i class="fas fa-exclamation-circle me-2"></i> Report Water Issue</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="complaintForm">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="complaintName" class="form-label">Your Name</label>
+                                <input type="text" class="form-control" id="complaintName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="complaintEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="complaintEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="complaintLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="complaintLocation" placeholder="Address or GPS coordinates" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="complaintType" class="form-label">Issue Type</label>
+                                <select class="form-select" id="complaintType" required>
+                                    <option value="">Select issue type</option>
+                                    <option value="contamination">Water Contamination</option>
+                                    <option value="shortage">Water Shortage</option>
+                                    <option value="infrastructure">Broken Infrastructure</option>
+                                    <option value="quality">Poor Water Quality</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="complaintDetails" class="form-label">Issue Details</label>
+                            <textarea class="form-control" id="complaintDetails" rows="4" placeholder="Describe the problem in detail..." required></textarea>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="complaintPhoto" class="form-label">Upload Photo (Optional)</label>
+                            <input type="file" class="form-control" id="complaintPhoto" accept="image/*">
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-submit">Submit Complaint</button>
+                        </div>
+                    </form>
+                    
+                    <div class="success-message" id="complaintSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Complaint Submitted Successfully!</h4>
+                        <p>Thank you for reporting this issue. Our team will review your complaint and take appropriate action.</p>
+                        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Volunteer Modal -->
+    <div class="modal fade" id="volunteerModal" tabindex="-1" aria-labelledby="volunteerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-water">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="volunteerModalLabel"><i class="fas fa-hands-helping me-2"></i> Volunteer Application</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="volunteerForm">
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="volunteerName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="volunteerName" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volunteerEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="volunteerEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-6">
+                                <label for="volunteerPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="volunteerPhone" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="volunteerLocation" class="form-label">Location</label>
+                                <input type="text" class="form-control" id="volunteerLocation" placeholder="City/Region" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label class="form-label">Areas of Interest</label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="interestEducation">
+                                        <label class="form-check-label" for="interestEducation">Education & Awareness</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="interestTesting">
+                                        <label class="form-check-label" for="interestTesting">Water Testing</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="interestDistribution">
+                                        <label class="form-check-label" for="interestDistribution">Water Distribution</label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input class="form-check-input" type="checkbox" id="interestFundraising">
+                                        <label class="form-check-label" for="interestFundraising">Fundraising</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="volunteerSkills" class="form-label">Skills & Experience</label>
+                            <textarea class="form-control" id="volunteerSkills" rows="3" placeholder="Any relevant skills or experience you have..."></textarea>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="volunteerAvailability" class="form-label">Availability</label>
+                            <select class="form-select" id="volunteerAvailability" required>
+                                <option value="">Select your availability</option>
+                                <option value="weekdays">Weekdays</option>
+                                <option value="weekends">Weekends</option>
+                                <option value="both">Both weekdays and weekends</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-submit">Apply to Volunteer</button>
+                        </div>
+                    </form>
+                    
+                    <div class="success-message" id="volunteerSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h4>Application Submitted!</h4>
+                        <p>Thank you for your interest in volunteering. We'll review your application and contact you soon.</p>
+                        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5><i class="fas fa-tint me-2"></i>CleanWater</h5>
+                    <p>Dedicated to providing clean water education and solutions to communities worldwide.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 mb-4">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="#home">Home</a>
+                        <a href="#why-safe-water">Why Safe Water</a>
+                        <a href="#purification-methods">Purification</a>
+                        <a href="#health-risks">Health Risks</a>
+                        <a href="#storage-tips">Storage Tips</a>
+                        <a href="#water-testing">Water Testing</a>
+                        <a href="#quiz">Quiz</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <div class="footer-links d-flex flex-column">
+                        <a href="#">Download Guides</a>
+                        <a href="#">Research Papers</a>
+                        <a href="#">Educational Materials</a>
+                        <a href="#">Water Quality Testing</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3 mb-4">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-envelope me-2"></i> info@cleanwater.org</p>
+                    <p><i class="fas fa-phone me-2"></i> 0123456789 <p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> 123 Clean Water , Watertown</p>
+                </div>
+            </div>
+            
+            <hr class="mt-4 mb-4" style="border-color: #495057;">
+            
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 CleanWater Initiative. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Back to top button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Quiz question pool with all questions (original + new)
+        const questionPool = [
+            {
+                question: "What is the minimum recommended boiling time to make water safe to drink at sea level?",
+                options: [
+                    "30 seconds",
+                    "1 minute",
+                    "5 minutes",
+                    "10 minutes"
+                ],
+                correct: 1,
+                explanation: "Water should be boiled for at least 1 minute at sea level (3 minutes at higher altitudes) to kill pathogens. This is sufficient to destroy bacteria, viruses, and parasites."
+            },
+            {
+                question: "Which of these diseases is NOT typically spread through contaminated water?",
+                options: [
+                    "Cholera",
+                    "Typhoid",
+                    "Malaria",
+                    "Dysentery"
+                ],
+                correct: 2,
+                explanation: "Malaria is spread by mosquitoes, not through contaminated water, though stagnant water can breed mosquitoes. Cholera, typhoid, and dysentery are all waterborne diseases."
+            },
+            {
+                question: "How often should you clean your water storage containers?",
+                options: [
+                    "Once a year",
+                    "Every 6 months",
+                    "Every 3 months",
+                    "At least once a week"
+                ],
+                correct: 3,
+                explanation: "Containers should be cleaned at least weekly with soap and clean water to prevent contamination. More frequent cleaning may be needed in hot climates or if the water is visibly dirty."
+            },
+            {
+                question: "Approximately how many people worldwide lack access to safe drinking water?",
+                options: [
+                    "500 million",
+                    "2.2 billion",
+                    "5 billion",
+                    "7.8 billion"
+                ],
+                correct: 1,
+                explanation: "About 2.2 billion people lack safely managed drinking water services according to WHO/UNICEF. This represents about 29% of the world's population."
+            },
+            {
+                question: "What is the ideal pH range for drinking water?",
+                options: [
+                    "0-4 (highly acidic)",
+                    "4-6 (slightly acidic)",
+                    "6.5-8.5 (near neutral)",
+                    "9-14 (alkaline)"
+                ],
+                correct: 2,
+                explanation: "The ideal pH range for drinking water is between 6.5 and 8.5. Water that's too acidic can corrode pipes and leach metals, while water that's too alkaline can cause scaling."
+            },
+            {
+                question: "Which water purification method is most effective against viruses?",
+                options: [
+                    "Boiling",
+                    "Ceramic filtration",
+                    "Activated carbon filtration",
+                    "Sedimentation"
+                ],
+                correct: 0,
+                explanation: "Boiling is effective against all pathogens including viruses, while filtration methods vary in effectiveness. Most basic filters don't remove viruses, which are much smaller than bacteria."
+            },
+            {
+                question: "What does TDS stand for in water quality testing?",
+                options: [
+                    "Total Dissolved Solids",
+                    "Toxic Drinking Substances",
+                    "Temperature Dependent Salinity",
+                    "Treated Drinking Standard"
+                ],
+                correct: 0,
+                explanation: "TDS stands for Total Dissolved Solids, which measures inorganic salts and organic matter in water. High TDS can affect taste and indicate contamination."
+            },
+            {
+                question: "Which of these is NOT a common heavy metal contaminant in water?",
+                options: [
+                    "Arsenic",
+                    "Lead",
+                    "Mercury",
+                    "Calcium"
+                ],
+                correct: 3,
+                explanation: "Calcium is a beneficial mineral in water, while the others are toxic heavy metals. Arsenic, lead, and mercury can cause serious health problems even at low concentrations."
+            },
+            {
+                question: "What is the primary purpose of adding alum to turbid water?",
+                options: [
+                    "To kill bacteria",
+                    "To adjust pH",
+                    "To remove suspended particles",
+                    "To add minerals"
+                ],
+                correct: 2,
+                explanation: "Alum causes suspended particles to clump together and settle (coagulation-flocculation process). It doesn't disinfect water but makes it clearer by removing dirt and some microorganisms."
+            },
+            {
+                question: "Which organization sets international drinking water standards?",
+                options: [
+                    "WHO (World Health Organization)",
+                    "UNICEF",
+                    "Red Cross",
+                    "EPA (Environmental Protection Agency)"
+                ],
+                correct: 0,
+                explanation: "WHO sets international guidelines, while organizations like EPA set national standards based on these. UNICEF implements water programs but doesn't set the standards."
+            },
+            {
+                question: "What is the main risk of drinking distilled water long-term?",
+                options: [
+                    "It contains too many minerals",
+                    "It may leach minerals from the body",
+                    "It's always contaminated",
+                    "It causes immediate poisoning"
+                ],
+                correct: 1,
+                explanation: "Distilled water lacks minerals and may leach small amounts from the body if consumed exclusively. However, most people get sufficient minerals from food."
+            },
+            {
+                question: "What is the recommended chlorine level for disinfecting drinking water?",
+                options: [
+                    "0.2-0.5 mg/L",
+                    "2-5 mg/L",
+                    "10-15 mg/L",
+                    "20-50 mg/L"
+                ],
+                correct: 0,
+                explanation: "The recommended chlorine residual in drinking water is 0.2-0.5 mg/L. Higher concentrations can make water unpalatable and may be harmful to health."
+            },
+            {
+                question: "How much water should an average adult drink daily?",
+                options: [
+                    "1-2 cups",
+                    "4-6 cups",
+                    "8-10 cups",
+                    "12-15 cups"
+                ],
+                correct: 2,
+                explanation: "The general recommendation is about 8-10 cups (2-2.5 liters) of water daily, but needs vary by activity level, climate, and individual factors. This includes water from all beverages and foods."
+            },
+            {
+                question: "What is the most common method of water purification in municipal systems?",
+                options: [
+                    "Boiling",
+                    "Chlorination",
+                    "Solar disinfection",
+                    "Sand filtration"
+                ],
+                correct: 1,
+                explanation: "Chlorination is the most common method in municipal systems because it's effective, inexpensive, and provides residual protection against recontamination in pipes."
+            },
+            {
+                question: "What is the main purpose of adding fluoride to drinking water?",
+                options: [
+                    "To kill bacteria",
+                    "To prevent tooth decay",
+                    "To remove heavy metals",
+                    "To improve taste"
+                ],
+                correct: 1,
+                explanation: "Fluoride is added to drinking water in controlled amounts to help prevent tooth decay and promote dental health. This practice began in the 1940s and has significantly reduced cavities in populations with fluoridated water."
+            },
+            {
+                question: "Which of these is NOT a common waterborne parasite?",
+                options: [
+                    "Giardia",
+                    "Cryptosporidium",
+                    "E. coli",
+                    "Schistosoma"
+                ],
+                correct: 2,
+                explanation: "E. coli is a bacterium, not a parasite. Giardia and Cryptosporidium are protozoan parasites, while Schistosoma is a worm that penetrates skin exposed to contaminated water."
+            },
+            {
+                question: "What does 'turbidity' measure in water?",
+                options: [
+                    "Temperature",
+                    "Cloudiness",
+                    "Acidity",
+                    "Mineral content"
+                ],
+                correct: 1,
+                explanation: "Turbidity measures water cloudiness caused by suspended particles. High turbidity can protect pathogens from disinfection and indicate contamination from soil runoff or other sources."
+            },
+            {
+                question: "Which water treatment method is most effective against chemical contaminants?",
+                options: [
+                    "Boiling",
+                    "Chlorination",
+                    "Activated carbon filtration",
+                    "UV treatment"
+                ],
+                correct: 2,
+                explanation: "Activated carbon filters are effective at removing many organic chemicals and improving taste/odor. Boiling and disinfection methods mainly address biological contaminants, not chemicals."
+            },
+            {
+                question: "What is the main health risk from arsenic in drinking water?",
+                options: [
+                    "Immediate poisoning",
+                    "Skin lesions and cancer",
+                    "Tooth discoloration",
+                    "High blood pressure"
+                ],
+                correct: 1,
+                explanation: "Chronic arsenic exposure causes skin lesions and increases cancer risk. Effects develop over years of exposure to even low concentrations (above 10 μg/L)."
+            },
+            {
+                question: "Why shouldn't you store water in reused plastic milk jugs?",
+                options: [
+                    "They're too small",
+                    "They're difficult to clean properly",
+                    "They make water taste bad",
+                    "They break down too quickly"
+                ],
+                correct: 1,
+                explanation: "Milk jugs are hard to clean completely, allowing bacteria to grow. Their plastic may degrade and leach chemicals. Use food-grade containers designed for water storage instead."
+            },
+            {
+                question: "What is the 'cleanest' source of water in an emergency?",
+                options: [
+                    "Water from a toilet tank (not bowl)",
+                    "Rainwater collected in clean containers",
+                    "Water from swimming pools",
+                    "Melted ice cubes"
+                ],
+                correct: 3,
+                explanation: "Melted ice cubes are typically safe if made from treated water. Toilet tank water may contain cleaning chemicals, rainwater could be contaminated, and pool water has chemicals."
+            },
+            {
+                question: "How does hard water affect plumbing systems?",
+                options: [
+                    "Causes corrosion",
+                    "Forms scale deposits",
+                    "Leads to bacterial growth",
+                    "Makes pipes brittle"
+                ],
+                correct: 1,
+                explanation: "Hard water contains dissolved calcium and magnesium that form scale deposits in pipes and appliances, reducing water flow and efficiency over time."
+            },
+            {
+                question: "What is the primary benefit of ceramic water filters?",
+                options: [
+                    "They remove viruses",
+                    "They don't require cleaning",
+                    "They're long-lasting and cleanable",
+                    "They add beneficial minerals"
+                ],
+                correct: 2,
+                explanation: "Ceramic filters have small pores that trap pathogens and can be cleaned and reused for years. They typically don't remove viruses unless treated with silver."
+            },
+            // New chemistry/physics questions
+            {
+                question: "What is the chemical formula of water?",
+                options: [
+                    "H<sub>2</sub>O",
+                    "CO<sub>2</sub>",
+                    "NaCl",
+                    "O<sub>2</sub>"
+                ],
+                correct: 0,
+                explanation: "The chemical formula of water is H<sub>2</sub>O, meaning each molecule contains two hydrogen atoms and one oxygen atom."
+            },
+            {
+                question: "At what temperature does water boil at sea level?",
+                options: [
+                    "50°C",
+                    "75°C",
+                    "100°C",
+                    "120°C"
+                ],
+                correct: 2,
+                explanation: "At standard atmospheric pressure (sea level), water boils at 100°C (212°F). This decreases with altitude as atmospheric pressure decreases."
+            },
+            {
+                question: "What percentage of oxygen (by mass) is in a water molecule?",
+                options: [
+                    "11.11%",
+                    "50%",
+                    "88.89%",
+                    "25%"
+                ],
+                correct: 2,
+                explanation: "Water (H<sub>2</sub>O) is approximately 88.89% oxygen by mass. The atomic mass of hydrogen is ~1 and oxygen is ~16, so oxygen makes up 16/(1+1+16) = 16/18 ≈ 88.89%."
+            },
+            {
+                question: "What is the freezing point of water?",
+                options: [
+                    "-10°C",
+                    "0°C",
+                    "10°C",
+                    "32°C"
+                ],
+                correct: 1,
+                explanation: "Pure water freezes at 0°C (32°F) at standard atmospheric pressure. Dissolved substances can lower this freezing point."
+            },
+            {
+                question: "Which of these is NOT a property of water?",
+                options: [
+                    "High specific heat capacity",
+                    "Universal solvent",
+                    "High surface tension",
+                    "Magnetic properties"
+                ],
+                correct: 3,
+                explanation: "Water is not magnetic. It does have high specific heat capacity (absorbs heat without large temp changes), is called the universal solvent (dissolves many substances), and has high surface tension."
+            }
+        ];
+
+        // Function to shuffle array (Fisher-Yates algorithm)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+
+        // Function to generate quiz questions
+        function generateQuiz() {
+            const quizContainer = document.getElementById('quiz-questions');
+            quizContainer.innerHTML = '';
+            
+            // Shuffle questions and select 5
+            const shuffledQuestions = shuffleArray([...questionPool]).slice(0, 5);
+            
+            shuffledQuestions.forEach((q, index) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'quiz-question mb-4';
+                questionDiv.setAttribute('data-correct', q.correct);
+                questionDiv.setAttribute('data-explanation', q.explanation);
+                
+                const questionHTML = `
+                    <h5>${index + 1}. ${q.question}</h5>
+                    ${q.options.map((opt, i) => 
+                        `<div class="quiz-option" data-option="${i}">${opt}</div>`
+                    ).join('')}
+                `;
+                
+                questionDiv.innerHTML = questionHTML;
+                quizContainer.appendChild(questionDiv);
+            });
+            
+            // Add event listeners to new options
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    const question = this.closest('.quiz-question');
+                    question.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    this.classList.add('selected');
+                });
+            });
+        }
+
+        // Initialize quiz when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            generateQuiz();
+            
+            const submitButton = document.getElementById('submit-quiz');
+            const retakeButton = document.getElementById('retake-quiz');
+            const quizResult = document.getElementById('quiz-result');
+            const quizQuestions = document.getElementById('quiz-questions');
+            const quizScore = document.getElementById('quiz-score');
+            const quizFeedback = document.getElementById('quiz-feedback');
+            const questionExplanations = document.getElementById('question-explanations');
+            
+            // Submit quiz
+            submitButton.addEventListener('click', function() {
+                let score = 0;
+                const questions = document.querySelectorAll('.quiz-question');
+                const shuffledQuestions = Array.from(questions).map(q => {
+                    return {
+                        element: q,
+                        correct: parseInt(q.getAttribute('data-correct')),
+                        explanation: q.getAttribute('data-explanation')
+                    };
+                });
+                
+                questionExplanations.innerHTML = '<h5>Answer Explanations:</h5>';
+                
+                shuffledQuestions.forEach((q, index) => {
+                    const correctAnswer = q.correct;
+                    const selectedOption = q.element.querySelector('.quiz-option.selected');
+                    
+                    // Add question and explanation
+                    const explanationDiv = document.createElement('div');
+                    explanationDiv.className = 'mb-3 p-3 bg-light rounded';
+                    explanationDiv.innerHTML = `
+                        <p><strong>Question ${index + 1}:</strong> ${q.element.querySelector('h5').textContent.replace(/^\d+\.\s/, '')}</p>
+                        <p><strong>Explanation:</strong> ${q.explanation}</p>
+                    `;
+                    questionExplanations.appendChild(explanationDiv);
+                    
+                    if (selectedOption && parseInt(selectedOption.getAttribute('data-option')) === correctAnswer) {
+                        score++;
+                        selectedOption.classList.add('bg-success', 'text-white');
+                    } else if (selectedOption) {
+                        selectedOption.classList.add('bg-danger', 'text-white');
+                        const correctOption = q.element.querySelector(`.quiz-option[data-option="${correctAnswer}"]`);
+                        correctOption.classList.add('bg-success', 'text-white');
+                    }
+                });
+                
+                // Show results
+                quizScore.textContent = score;
+                
+                if (score === 5) {
+                    quizFeedback.textContent = "Excellent! You have a thorough understanding of water safety issues.";
+                } else if (score >= 3) {
+                    quizFeedback.textContent = "Good job! You know quite a bit about water safety but there's more to learn.";
+                } else {
+                    quizFeedback.textContent = "Keep learning! Review the materials and try again to improve your knowledge.";
+                }
+                
+                quizQuestions.style.display = 'none';
+                quizResult.style.display = 'block';
+            });
+            
+            // Retake quiz
+            retakeButton.addEventListener('click', function() {
+                generateQuiz();
+                quizQuestions.style.display = 'block';
+                quizResult.style.display = 'none';
+            });
+
+            // Water quality analyzer
+            const analyzeBtn = document.getElementById('analyze-btn');
+            const resultsContainer = document.getElementById('results-container');
+            
+            analyzeBtn.addEventListener('click', function() {
+                const phValue = parseFloat(document.getElementById('ph-value').value);
+                const tdsValue = parseInt(document.getElementById('tds-value').value);
+                
+                if (isNaN(phValue) || isNaN(tdsValue)) {
+                    alert('Please enter both pH and TDS values!');
+                    return;
+                }
+                
+                // Analyze pH
+                let phMessage = '';
+                let phClass = '';
+                if (phValue < 6.5) {
+                    phMessage = `Your water is <strong>too acidic (pH ${phValue})</strong>. This can corrode pipes and leach metals.`;
+                    phClass = 'bg-danger text-white';
+                } else if (phValue > 8.5) {
+                    phMessage = `Your water is <strong>too alkaline (pH ${phValue})</strong>. This causes scaling and reduces disinfection efficiency.`;
+                    phClass = 'bg-warning text-dark';
+                } else {
+                    phMessage = `Your water pH is <strong>perfect (${phValue})</strong>!`;
+                    phClass = 'bg-success text-white';
+                }
+                
+                // Analyze TDS
+                let tdsMessage = '';
+                let tdsClass = '';
+                if (tdsValue < 50) {
+                    tdsMessage = `Your water has <strong>very low TDS (${tdsValue} mg/L)</strong>. It may taste flat and lack minerals.`;
+                    tdsClass = 'bg-info text-dark';
+                } else if (tdsValue <= 300) {
+                    tdsMessage = `Your TDS level is <strong>excellent (${tdsValue} mg/L)</strong>!`;
+                    tdsClass = 'bg-success text-white';
+                } else if (tdsValue <= 600) {
+                    tdsMessage = `Your TDS level is <strong>good (${tdsValue} mg/L)</strong>.`;
+                    tdsClass = 'bg-primary text-white';
+                } else if (tdsValue <= 900) {
+                    tdsMessage = `Your TDS level is <strong>fair (${tdsValue} mg/L)</strong>. Consider treatment if taste is unpleasant.`;
+                    tdsClass = 'bg-warning text-dark';
+                } else {
+                    tdsMessage = `Your TDS level is <strong>too high (${tdsValue} mg/L)</strong>. Treatment recommended.`;
+                    tdsClass = 'bg-danger text-white';
+                }
+                
+                // Generate recommendations
+                let recommendations = '<h5>Recommendations:</h5><ul>';
+                
+                // pH recommendations
+                if (phValue < 6.5) {
+                    recommendations += '<li>Use a <strong>neutralizing filter</strong> (with calcium carbonate)</li>';
+                    recommendations += '<li>Consider adding <strong>soda ash</strong> (small amounts)</li>';
+                } else if (phValue > 8.5) {
+                    recommendations += '<li>Install an <strong>acid injection system</strong></li>';
+                    recommendations += '<li>Use <strong>reverse osmosis (RO)</strong> which slightly lowers pH</li>';
+                }
+                
+                // TDS recommendations
+                if (tdsValue > 600) {
+                    recommendations += '<li>Install a <strong>reverse osmosis (RO) system</strong></li>';
+                    recommendations += '<li>Consider <strong>distillation</strong> for high purity</li>';
+                } else if (tdsValue < 50) {
+                    recommendations += '<li>Add <strong>mineral drops</strong> for essential minerals</li>';
+                    recommendations += '<li>Consider <strong>mineral-rich spring water</strong> occasionally</li>';
+                }
+                
+                if (phValue >= 6.5 && phValue <= 8.5 && tdsValue <= 600 && tdsValue >= 50) {
+                    recommendations += '<li>Your water quality is good! Maintain your current treatment methods.</li>';
+                }
+                
+                recommendations += '</ul>';
+                
+                // Display results
+                document.getElementById('ph-result').innerHTML = `<h5>pH Analysis:</h5><p class="mb-0">${phMessage}</p>`;
+                document.getElementById('ph-result').className = `mb-3 p-3 rounded ${phClass}`;
+                
+                document.getElementById('tds-result').innerHTML = `<h5>TDS Analysis:</h5><p class="mb-0">${tdsMessage}</p>`;
+                document.getElementById('tds-result').className = `mb-3 p-3 rounded ${tdsClass}`;
+                
+                document.getElementById('recommendations').innerHTML = recommendations;
+                resultsContainer.style.display = 'block';
+                
+                // Scroll to results
+                resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        });
+
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+        
+        // AI Chatbot functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const chatMessages = document.getElementById('chat-messages');
+            const userInput = document.getElementById('user-input');
+            const sendBtn = document.getElementById('send-btn');
+            const suggestedQuestions = document.querySelectorAll('.suggested-question');
+            const chatContainer = document.getElementById('chat-container');
+            
+            // Enhanced water knowledge base with chemistry/physics additions
+            const waterKnowledge = {
+                "importance": {
+                    "why": "<strong>Why Safe Water Matters:</strong><br><br>" +
+                          "• Prevents waterborne diseases (cholera, dysentery, typhoid)<br>" +
+                          "• Reduces child mortality (297,000 children under 5 die annually from diarrhea)<br>" +
+                          "• Improves nutrition and food safety<br>" +
+                          "• Supports education (children miss less school)<br>" +
+                          "• Promotes economic development<br><br>" +
+                          "2.2 billion people lack access to safe drinking water globally.",
+                    "statistics": "<strong>Global Water Crisis Statistics:</strong><br><br>" +
+                                 "• 2.2 billion lack safe drinking water<br>" +
+                                 "• 4.2 billion lack safe sanitation<br>" +
+                                 "• 297,000 children under 5 die annually from diarrhea<br>" +
+                                 "• 80% of illnesses in developing countries are water-related<br>" +
+                                 "• Women spend 200 million hours daily collecting water"
+                },
+                "parameters": {
+                    "ph": "<strong>Safe pH Levels:</strong> 6.5-8.5 (ideal for drinking)<br>" +
+                         "<strong>Effects of incorrect pH:</strong><br>" +
+                         "• Low pH (<6.5): Corrosive, may leach metals from pipes<br>" +
+                         "• High pH (>8.5): Causes scaling, bitter taste<br><br>" +
+                         "Test with pH strips or digital meter.",
+                    "tds": "<strong>Safe TDS Levels:</strong><br>" +
+                          "• 0-300 mg/L: Excellent<br>" +
+                          "• 300-600 mg/L: Good<br>" +
+                          "• 600-900 mg/L: Fair (consider treatment)<br>" +
+                          "• 900+ mg/L: Poor (needs treatment)<br><br>" +
+                          "TDS meters measure total dissolved solids.",
+                    "both": "<strong>Ideal Water Parameters:</strong><br><br>" +
+                           "• pH: 6.5-8.5<br>" +
+                           "• TDS: <500 mg/L<br>" +
+                           "• Turbidity: <1 NTU<br>" +
+                           "• Chlorine: 0.2-0.5 mg/L<br>" +
+                           "• Bacteria: 0 coliforms/100ml"
+                },
+                "chemistry": {
+                    "formula": "<strong>Chemical Formula of Water:</strong> <span class='chem-formula'>H<sub>2</sub>O</span><br><br>" +
+                              "• Each water molecule contains 2 hydrogen atoms and 1 oxygen atom<br>" +
+                              "• Molecular weight: ~18 g/mol<br>" +
+                              "• Polar molecule with hydrogen bonding",
+                    "composition": "<strong>Water Composition:</strong><br><br>" +
+                                  "• <span class='chem-element'>Hydrogen</span>: 11.19% by mass<br>" +
+                                  "• <span class='chem-element'>Oxygen</span>: 88.81% by mass<br>" +
+                                  "• Natural water contains dissolved minerals (Ca, Mg, Na, etc.)",
+                    "boiling_point": "<strong>Boiling Point of Water:</strong> <span class='temp-value'>100°C</span> at sea level<br><br>" +
+                                    "• Decreases with altitude (lower atmospheric pressure)<br>" +
+                                    "• Increases with added solutes (boiling point elevation)<br>" +
+                                    "• Critical point: <span class='temp-value'>374°C</span> and 218 atm",
+                    "freezing_point": "<strong>Freezing Point of Water:</strong> <span class='temp-value'>0°C</span> at sea level<br><br>" +
+                                     "• Can be lowered by adding salts (used in de-icing)<br>" +
+                                     "• Ice is less dense than liquid water (unique property)<br>" +
+                                     "• Triple point: <span class='temp-value'>0.01°C</span> at 611.657 Pa",
+                    "oxygen_content": "<strong>Oxygen Content in Water:</strong><br><br>" +
+                                     "• By mass: 88.81% oxygen (<span class='chem-formula'>H<sub>2</sub>O</span>)<br>" +
+                                     "• Dissolved oxygen (DO): Typically 5-10 mg/L in healthy water<br>" +
+                                     "• DO decreases with higher temperature and salinity",
+                    "properties": "<strong>Unique Properties of Water:</strong><br><br>" +
+                                 "• High specific heat capacity (moderates climate)<br>" +
+                                 "• Universal solvent (dissolves many substances)<br>" +
+                                 "• High surface tension (forms droplets)<br>" +
+                                 "• Expands when freezing (ice floats)<br>" +
+                                 "• Exists in three states naturally on Earth"
+                },
+                "purification": {
+                    "methods": "<strong>Water Purification Methods:</strong><br><br>" +
+                             "1. Boiling (1 minute rolling boil)<br>" +
+                             "2. Filtration (activated carbon, RO, ceramic)<br>" +
+                             "3. Chlorination (2-4 drops bleach per liter)<br>" +
+                             "4. UV Treatment (kills microorganisms)<br>" +
+                             "5. Distillation (removes nearly all contaminants)",
+                    "boiling": "<strong>Boiling Water:</strong><br><br>" +
+                              "• Most effective against pathogens<br>" +
+                              "• Bring to rolling boil for 1 minute (3 at high altitude)<br>" +
+                              "• Doesn't remove chemical contaminants<br>" +
+                              "• Let cool naturally before drinking",
+                    "filtration": "<strong>Water Filtration:</strong><br><br>" +
+                                 "<strong>Types:</strong><br>" +
+                                 "• Activated Carbon (chemicals/taste)<br>" +
+                                 "• Ceramic (bacteria/protozoa)<br>" +
+                                 "• Reverse Osmosis (removes most contaminants)<br>" +
+                                 "• UV (kills microorganisms)<br><br>" +
+                                 "Choose NSF-certified filters for specific contaminants.",
+                    "chlorination": "<strong>Chlorination:</strong><br><br>" +
+                                   "• Add 2-4 drops (5-6% bleach) per liter<br>" +
+                                   "• Mix and wait 30 minutes<br>" +
+                                   "• Slight chlorine smell indicates safety<br>" +
+                                   "• Doesn't remove chemical contaminants",
+                    "alum": "<strong>Alum Treatment:</strong><br><br>" +
+                           "• Clears turbid water (1-2 tsp per 20L)<br>" +
+                           "• Stir and let settle 1-2 hours<br>" +
+                           "• Pour off clear water<br>" +
+                           "• Doesn't disinfect - must boil/chlorinate after"
+                },
+                "storage": {
+                    "duration": "<strong>Water Storage Duration:</strong><br><br>" +
+                               "• <strong>Treated water</strong>: 6 months in clean containers<br>" +
+                               "• <strong>Untreated water</strong>: 1-2 days max<br>" +
+                               "• <strong>Emergency storage</strong>: Rotate every 6 months<br><br>" +
+                               "<strong>Signs water is unsafe:</strong> Cloudiness, odor, algae",
+                    "containers": "<strong>Best Storage Containers:</strong><br><br>" +
+                                 "• Food-grade plastic (HDPE #2)<br>" +
+                                 "• Stainless steel<br>" +
+                                 "• Glass (with tight lids)<br>" +
+                                 "• Commercial water storage containers<br><br>" +
+                                 "<strong>Avoid:</strong> Milk jugs, used juice bottles",
+                    "location": "<strong>Storage Location Tips:</strong><br><br>" +
+                               "• Cool (below <span class='temp-value'>21°C</span>)<br>" +
+                               "• Dark (away from sunlight)<br>" +
+                               "• Elevated (above flood level)<br>" +
+                               "• Away from chemicals<br>" +
+                               "• Not on concrete floors"
+                },
+                "health": {
+                    "risks": "<strong>Health Risks from Contaminated Water:</strong><br><br>" +
+                            "<strong>Short-term:</strong><br>" +
+                            "• Diarrhea (cholera, E. coli)<br>" +
+                            "• Dysentery<br>" +
+                            "• Typhoid<br><br>" +
+                            "<strong>Long-term:</strong><br>" +
+                            "• Cancer (arsenic)<br>" +
+                            "• Neurological damage (lead)<br>" +
+                            "• Developmental issues (children)",
+                    "symptoms": "<strong>Symptoms of Contaminated Water:</strong><br><br>" +
+                               "• Diarrhea<br>" +
+                               "• Vomiting<br>" +
+                               "• Stomach cramps<br>" +
+                               "• Fever<br>" +
+                               "• Dehydration<br><br>" +
+                               "Seek medical help if symptoms persist >2 days",
+                    "children": "<strong>Effects on Children:</strong><br><br>" +
+                               "• More vulnerable due to developing systems<br>" +
+                               "• Higher risk of stunted growth<br>" +
+                               "• Cognitive impairment<br>" +
+                               "• Higher mortality from diarrhea"
+                },
+                "testing": {
+                    "home": "<strong>Home Water Testing:</strong><br><br>" +
+                           "1. Visual inspection (color/particles)<br>" +
+                           "2. Smell test (unusual odors)<br>" +
+                           "3. Taste test (metallic/chemical tastes)<br>" +
+                           "4. Test strips (pH, chlorine, hardness)<br>" +
+                           "5. TDS meter<br><br>" +
+                           "For bacteria/heavy metals, use professional testing.",
+                    "kits": "<strong>Water Test Kits:</strong><br><br>" +
+                           "<strong>Basic ($20-50):</strong> pH, hardness, chlorine<br>" +
+                           "<strong>Advanced ($100-200):</strong> Lead, arsenic, pesticides<br>" +
+                           "<strong>Professional ($200+):</strong> Bacteria testing<br><br>" +
+                           "Look for EPA/NSF certification."
+                },
+                "emergency": {
+                    "preparation": "<strong>Emergency Water Prep:</strong><br><br>" +
+                                  "• Store 1 gallon/person/day (3+ for medical needs)<br>" +
+                                  "• Prepare for minimum 3 days (ideally 2 weeks)<br>" +
+                                  "• Include purification methods (bleach, filters)<br>" +
+                                  "• Rotate every 6 months<br>" +
+                                  "• Don't forget pets' water needs",
+                    "sources": "<strong>Emergency Water Sources:</strong><br><br>" +
+                              "1. Melted ice cubes<br>" +
+                              "2. Water heater tank<br>" +
+                              "3. Canned fruits/vegetables<br>" +
+                              "4. Toilet tank (not bowl)<br>" +
+                              "5. Rainwater (if properly collected)<br><br>" +
+                              "<strong>Avoid:</strong> Swimming pools, water beds"
+                },
+                "common": {
+                    "boiled_safe": "<strong>Is Boiled Water Safe?</strong><br><br>" +
+                                  "Yes, if boiled properly (1 minute rolling boil).<br>" +
+                                  "• Kills pathogens (bacteria, viruses, parasites)<br>" +
+                                  "• Doesn't remove chemical contaminants<br>" +
+                                  "• Store in clean containers after cooling",
+                    "plastic_safe": "<strong>Is Plastic Bottled Water Safe?</strong><br><br>" +
+                                   "Generally yes, but:<br>" +
+                                   "• May contain microplastics<br>" +
+                                   "• Don't reuse single-use bottles<br>" +
+                                   "• Avoid heating plastic bottles<br>" +
+                                   "• Better alternatives: Glass/stainless steel",
+                    "rainwater": "<strong>Can I Drink Rainwater?</strong><br><br>" +
+                                "Only if properly collected and treated:<br>" +
+                                "1. Collect from clean roof into clean container<br>" +
+                                "2. Filter through cloth<br>" +
+                                "3. Boil or disinfect<br><br>" +
+                                "Rainwater may contain pollutants from atmosphere.",
+                    "hardwater": "<strong>Is Hard Water Safe?</strong><br><br>" +
+                                "Yes, hard water is safe to drink but:<br>" +
+                                "• Causes scale buildup in pipes/appliances<br>" +
+                                "• Reduces soap lather<br>" +
+                                "• May contain beneficial minerals (calcium/magnesium)<br><br>" +
+                                "Water softeners add sodium - consult doctor if on low-sodium diet.",
+                    "fluoride": "<strong>Fluoride in Water:</strong><br><br>" +
+                               "• Added to prevent tooth decay (0.7-1.2 mg/L optimal)<br>" +
+                               "• Naturally occurs in some water sources<br>" +
+                               "• Excessive fluoride can cause dental fluorosis<br>" +
+                               "• Removable by reverse osmosis/distillation",
+                    "lead": "<strong>Lead in Water:</strong><br><br>" +
+                           "• Comes from old pipes/solder<br>" +
+                           "• No safe level, especially harmful to children<br>" +
+                           "<strong>Prevention:</strong><br>" +
+                           "• Run cold water 30+ seconds if unused for hours<br>" +
+                           "• Use cold water for cooking/drinking<br>" +
+                           "• Install NSF-certified lead removal filters",
+                    "smell": "<strong>Why Does My Water Smell?</strong><br><br>" +
+                            "<strong>Rotten egg smell:</strong> Hydrogen sulfide<br>" +
+                            "<strong>Bleach smell:</strong> Chlorine treatment<br>" +
+                            "<strong>Musty smell:</strong> Algae or bacteria<br>" +
+                            "<strong>Metallic smell:</strong> Iron/other metals<br><br>" +
+                            "Have water tested if unusual smells persist.",
+                    "taste": "<strong>Why Does My Water Taste Bad?</strong><br><br>" +
+                            "<strong>Metallic:</strong> Iron/copper pipes<br>" +
+                            "<strong>Salty:</strong> High sodium or TDS<br>" +
+                            "<strong>Chemical:</strong> Chlorine or contaminants<br>" +
+                            "<strong>Earth/musty:</strong> Algae or bacteria<br><br>" +
+                            "Consider filtration if taste is unpleasant.",
+                    "cloudy": "<strong>Why Is My Water Cloudy?</strong><br><br>" +
+                             "• Air bubbles (harmless, clears if left standing)<br>" +
+                             "• Suspended particles (needs filtration)<br>" +
+                             "• Bacterial growth (needs disinfection)<br>" +
+                             "• High mineral content<br><br>" +
+                             "If cloudiness persists, have water tested."
+                }
+            };
+            
+            // Function to add message to chat
+            function addMessage(sender, message) {
+                const messageDiv = document.createElement('div');
+                messageDiv.className = `chat-message ${sender}-message mb-3 p-3 rounded`;
+                messageDiv.innerHTML = `<strong>${sender === 'user' ? 'You' : 'Water Assistant'}:</strong> ${message}`;
+                chatMessages.appendChild(messageDiv);
+                chatContainer.scrollTop = chatContainer.scrollHeight;
+            }
+            
+            // Enhanced question processing with chemistry/physics additions
+            function processQuestion(question) {
+                question = question.toLowerCase().trim();
+                let response = "I can help with all water-related questions. Try asking about:<br>" +
+                              "• Water chemistry (formula, composition, properties)<br>" +
+                              "• Purification methods<br>" +
+                              "• Water testing<br>" +
+                              "• Storage guidelines<br>" +
+                              "• Health concerns";
+                
+                // Chemistry questions
+                if (question.includes('formula') || question.includes('chemical makeup') || question.includes('h2o')) {
+                    response = waterKnowledge.chemistry.formula;
+                }
+                else if (question.includes('composition') || question.includes('makeup') || question.includes('components')) {
+                    response = waterKnowledge.chemistry.composition;
+                }
+                else if (question.includes('boiling point') || question.includes('boils at') || question.includes('boil at')) {
+                    response = waterKnowledge.chemistry.boiling_point;
+                }
+                else if (question.includes('freezing point') || question.includes('freezes at') || question.includes('freeze at')) {
+                    response = waterKnowledge.chemistry.freezing_point;
+                }
+                else if (question.includes('oxygen content') || question.includes('percentage of oxygen') || question.includes('oxygen in water')) {
+                    response = waterKnowledge.chemistry.oxygen_content;
+                }
+                else if (question.includes('properties') || question.includes('characteristics') || question.includes('unique')) {
+                    response = waterKnowledge.chemistry.properties;
+                }
+                // Importance questions
+                else if (question.includes('why') && (question.includes('safe water') || question.includes('clean water') || question.includes('important'))) {
+                    response = waterKnowledge.importance.why;
+                }
+                else if (question.includes('statistic') || question.includes('fact') || question.includes('data')) {
+                    response = waterKnowledge.importance.statistics;
+                }
+                // Parameter questions
+                else if (question.includes('ph') && question.includes('tds')) {
+                    response = waterKnowledge.parameters.both;
+                }
+                else if (question.includes('ph') || question.includes('acid') || question.includes('alkaline')) {
+                    response = waterKnowledge.parameters.ph;
+                }
+                else if (question.includes('tds') || question.includes('total dissolved') || question.includes('mineral content')) {
+                    response = waterKnowledge.parameters.tds;
+                }
+                // Purification questions
+                else if (question.includes('purif') || question.includes('clean') || question.includes('treat') || question.includes('disinfect')) {
+                    if (question.includes('boil')) {
+                        response = waterKnowledge.purification.boiling;
+                    }
+                    else if (question.includes('filter') || question.includes('ro') || question.includes('reverse osmosis')) {
+                        response = waterKnowledge.purification.filtration;
+                    }
+                    else if (question.includes('chlor') || question.includes('bleach')) {
+                        response = waterKnowledge.purification.chlorination;
+                    }
+                    else if (question.includes('alum')) {
+                        response = waterKnowledge.purification.alum;
+                    }
+                    else {
+                        response = waterKnowledge.purification.methods;
+                    }
+                }
+                // Storage questions
+                else if (question.includes('store') || question.includes('keep') || question.includes('container')) {
+                    if (question.includes('how long') || question.includes('duration')) {
+                        response = waterKnowledge.storage.duration;
+                    }
+                    else if (question.includes('container') || question.includes('bottle')) {
+                        response = waterKnowledge.storage.containers;
+                    }
+                    else if (question.includes('where') || question.includes('place') || question.includes('location')) {
+                        response = waterKnowledge.storage.location;
+                    }
+                    else {
+                        response = waterKnowledge.storage.duration + "<br><br>" + waterKnowledge.storage.containers;
+                    }
+                }
+                // Health questions
+                else if (question.includes('health') || question.includes('risk') || question.includes('effect') || question.includes('symptom')) {
+                    if (question.includes('child') || question.includes('kid') || question.includes('baby')) {
+                        response = waterKnowledge.health.children;
+                    }
+                    else if (question.includes('symptom') || question.includes('sign')) {
+                        response = waterKnowledge.health.symptoms;
+                    }
+                    else {
+                        response = waterKnowledge.health.risks;
+                    }
+                }
+                // Testing questions
+                else if (question.includes('test') || question.includes('check') || question.includes('measure')) {
+                    if (question.includes('kit') || question.includes('strip')) {
+                        response = waterKnowledge.testing.kits;
+                    }
+                    else {
+                        response = waterKnowledge.testing.home;
+                    }
+                }
+                // Emergency questions
+                else if (question.includes('emergency') || question.includes('disaster') || question.includes('prepared')) {
+                    if (question.includes('source') || question.includes('find water')) {
+                        response = waterKnowledge.emergency.sources;
+                    }
+                    else {
+                        response = waterKnowledge.emergency.preparation;
+                    }
+                }
+                // Common questions
+                else if (question.includes('boiled') && (question.includes('safe') || question.includes('drink'))) {
+                    response = waterKnowledge.common.boiled_safe;
+                }
+                else if (question.includes('plastic') && (question.includes('safe') || question.includes('bottle'))) {
+                    response = waterKnowledge.common.plastic_safe;
+                }
+                else if (question.includes('rainwater') || question.includes('rain water')) {
+                    response = waterKnowledge.common.rainwater;
+                }
+                else if (question.includes('hard water') || question.includes('soft water')) {
+                    response = waterKnowledge.common.hardwater;
+                }
+                else if (question.includes('fluoride')) {
+                    response = waterKnowledge.common.fluoride;
+                }
+                else if (question.includes('lead')) {
+                    response = waterKnowledge.common.lead;
+                }
+                else if (question.includes('smell') || question.includes('odor')) {
+                    response = waterKnowledge.common.smell;
+                }
+                else if (question.includes('taste') || question.includes('flavor')) {
+                    response = waterKnowledge.common.taste;
+                }
+                else if (question.includes('cloudy') || question.includes('foggy') || question.includes('milky')) {
+                    response = waterKnowledge.common.cloudy;
+                }
+                // Greetings
+                else if (question.includes('hi') || question.includes('hello') || question.includes('hey')) {
+                    response = "Hello! I'm your Water Quality Assistant. Ask me about:<br>" +
+                              "• Water chemistry (formula, composition, properties)<br>" +
+                              "• Purification methods<br>" +
+                              "• Health risks<br>" +
+                              "• Storage recommendations";
+                }
+                // Thanks
+                else if (question.includes('thank') || question.includes('appreciate')) {
+                    response = "You're welcome! Remember that safe water is essential for health. Let me know if you have any other questions!";
+                }
+                
+                return response;
+            }
+            
+            // Send button click handler
+            sendBtn.addEventListener('click', function() {
+                const question = userInput.value.trim();
+                if (question) {
+                    addMessage('user', question);
+                    userInput.value = '';
+                    
+                    // Simulate typing indicator
+                    const typingIndicator = document.createElement('div');
+                    typingIndicator.id = 'typing-indicator';
+                    typingIndicator.className = 'chat-message bot-message mb-3 p-3 rounded';
+                    typingIndicator.innerHTML = '<strong>Water Assistant:</strong> <span class="typing-dots"><span>.</span><span>.</span><span>.</span></span>';
+                    chatMessages.appendChild(typingIndicator);
+                    chatContainer.scrollTop = chatContainer.scrollHeight;
+                    
+                    // Simulate processing delay
+                    setTimeout(function() {
+                        document.getElementById('typing-indicator').remove();
+                        const response = processQuestion(question);
+                        addMessage('bot', response);
+                    }, 800 + Math.random() * 1200);
+                }
+            });
+            
+            // Enter key handler
+            userInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    sendBtn.click();
+                }
+            });
+            
+            // Suggested question click handlers
+            suggestedQuestions.forEach(button => {
+                button.addEventListener('click', function() {
+                    userInput.value = this.textContent;
+                    userInput.focus();
+                });
+            });
+        });
+
+        // Add new form handling for complaint and volunteer forms
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle complaint form submission
+            document.getElementById('complaintForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the data to a server
+                // For demo purposes, we'll just show the success message
+                this.style.display = 'none';
+                document.getElementById('complaintSuccess').style.display = 'block';
+            });
+
+            // Handle volunteer form submission
+            document.getElementById('volunteerForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the data to a server
+                // For demo purposes, we'll just show the success message
+                this.style.display = 'none';
+                document.getElementById('volunteerSuccess').style.display = 'block';
+            });
+
+            // Reset forms when modal is closed
+            document.querySelectorAll('.modal').forEach(modal => {
+                modal.addEventListener('hidden.bs.modal', function() {
+                    const forms = this.querySelectorAll('form');
+                    const successMessages = this.querySelectorAll('.success-message');
+                    
+                    forms.forEach(form => {
+                        form.style.display = 'block';
+                        form.reset();
+                    });
+                    
+                    successMessages.forEach(message => {
+                        message.style.display = 'none';
+                    });
+                });
+            });
+        });
+    </script>
+    <script>
+  // Wait for DOM load
+  document.addEventListener('DOMContentLoaded', function () {
+    const volunteerForm = document.getElementById('volunteerForm');
+    const complaintForm = document.getElementById('complaintForm');
+    const volunteerSuccess = document.getElementById('volunteerSuccess');
+    const complaintSuccess = document.getElementById('complaintSuccess');
+
+    // Volunteer form submit handler
+    volunteerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById('volunteerName').value,
+        email: document.getElementById('volunteerEmail').value,
+        phone: document.getElementById('volunteerPhone').value,
+        location: document.getElementById('volunteerLocation').value,
+        interestEducation: document.getElementById('interestEducation').checked,
+        interestTesting: document.getElementById('interestTesting').checked,
+        interestDistribution: document.getElementById('interestDistribution').checked,
+        interestFundraising: document.getElementById('interestFundraising').checked,
+        skills: document.getElementById('volunteerSkills').value,
+        availability: document.getElementById('volunteerAvailability').value
+      };
+
+      fetch('/add_volunteer', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(res => {
+          if (!res.ok) return res.text().then(text => { throw new Error(text) });
+          return res.json();
+        })
+        .then(resp => {
+          // Show success message and hide form
+          volunteerForm.style.display = 'none';
+          volunteerSuccess.style.display = 'block';
+          
+          // Reset form but keep it hidden
+          volunteerForm.reset();
+        })
+        .catch(err => {
+          console.error('Error:', err);
+          alert('Error submitting volunteer application: ' + err.message);
+        });
+    });
+
+    // Complaint form submit handler
+    complaintForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById('complaintName').value,
+        email: document.getElementById('complaintEmail').value,
+        location: document.getElementById('complaintLocation').value,
+        type: document.getElementById('complaintType').value,
+        details: document.getElementById('complaintDetails').value,
+      };
+
+      fetch('/add_complaint', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(res => {
+          if (!res.ok) return res.text().then(text => { throw new Error(text) });
+          return res.json();
+        })
+        .then(resp => {
+          // Show success message and hide form
+          complaintForm.style.display = 'none';
+          complaintSuccess.style.display = 'block';
+          
+          // Reset form but keep it hidden
+          complaintForm.reset();
+        })
+        .catch(err => {
+          console.error('Error:', err);
+          alert('Error submitting complaint: ' + err.message);
+        });
+    });
+
+    // Reset forms and success messages when modals are opened
+    document.getElementById('volunteerModal').addEventListener('show.bs.modal', function () {
+      volunteerForm.style.display = 'block';
+      volunteerSuccess.style.display = 'none';
+      volunteerForm.reset();
+    });
+
+    document.getElementById('complaintModal').addEventListener('show.bs.modal', function () {
+      complaintForm.style.display = 'block';
+      complaintSuccess.style.display = 'none';
+      complaintForm.reset();
+    });
+  });
+</script>
+
+</body>
+</html>
